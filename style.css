@@ -1,0 +1,43 @@
+html, body {
+  height: 90%;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+.maplibregl-user-location-dot {
+  display: none !important;
+}
+
+#map {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+}
+#game-message {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(252, 237, 195, 0.95);
+  color: #382110;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  z-index: 10;
+  display: none;
+  pointer-events: none;
+}
+
+@keyframes bob {
+  0% { transform: translateY(0);}
+  50% { transform: translateY(-2px);}
+  100% { transform: translateY(0);}
+}
+.bobbing-img {
+  animation: bob 1.2s infinite ease-in-out;
+  will-change: transform;
+}
